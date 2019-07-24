@@ -3,6 +3,7 @@ package com.example.mybatis_01.bean;
 /**
  * bean类
  */
+
 public class User {
     private int id;
     private String name;
