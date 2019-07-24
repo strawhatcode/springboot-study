@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/druid/druid.iml" filepath="$PROJECT_DIR$/druid/druid.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mybatis_01/mybatis_01.iml" filepath="$PROJECT_DIR$/mybatis_01/mybatis_01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mybatis_02_generation/mybatis_02_generation.iml" filepath="$PROJECT_DIR$/mybatis_02_generation/mybatis_02_generation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/01_mybatis/01_mybatis.iml" filepath="$PROJECT_DIR$/01_mybatis/01_mybatis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_mybatis_generator/02_mybatis_generator.iml" filepath="$PROJECT_DIR$/02_mybatis_generator/02_mybatis_generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_druid/03_druid.iml" filepath="$PROJECT_DIR$/03_druid/03_druid.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/springbootNote.iml" filepath="$PROJECT_DIR$/.idea/springbootNote.iml" />
     </modules>
   </component>
