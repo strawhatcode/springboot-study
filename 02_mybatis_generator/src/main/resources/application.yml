@@ -9,4 +9,4 @@ mybatis:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #打印sql语句
     map-underscore-to-camel-case: true                     #使用驼峰命名法
   type-aliases-package: "com.example.m_generation.bean"    #别名的包路径
-  mapper-locations: classpath:mybatis/mapper/*.xml         #mapper映射的xml目录（写的sql语句的xml文件）
+  mapper-locations: classpath:mybatis/mybatis/*.xml         #mapper映射的xml目录（写的sql语句的xml文件）

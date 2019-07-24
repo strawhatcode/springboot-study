@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis:
-  mapper-locations: classpath:mybatis/mapper/*.xml   #mapper的路径
+  mapper-locations: classpath:mybatis/mybatis/*.xml   #mapper的路径
   type-aliases-package: com.example.mybatis_01.bean  #别名所在的路径
   configuration:
     map-underscore-to-camel-case: true #驼峰命名法
