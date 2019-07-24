@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource   #使用druid数据源
+    url: "jdbc:mysql://localhost:3306/test01?characterEncoding=utf8&serviceTimezone=utc"
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    druid:
+      #连接池的配置
+      initial-size: 5    #连接池初始化大小
+      min-idle: 1        #连接池最小值
+      max-active: 20     #连接池最大值
+      max-wait: 60000    #获取连接等待超时的时间
+      #间隔多久进行一次检测，检测需要关闭空闲连接
+      time-between-eviction-runs-millis: 60000
+      #一个连接池中最小生存的时间
+      min-evictable-idle-time-millis: 300000
+      #测试连接
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true   #申请连接时检测，建议配置为true，不影响性能且保证安全性
+      test-on-borrow: false   #获取连接时执行检测，开启会影响性能
+      test-on-return: false   #归还连接时执行检测，开启会影响性能
+      #是否开启PSCache，这个对支持游标的数据库性能提升巨大，Oracle建议开启，MySQL建议关闭
+      pool-prepared-statements: false
+      #PSCache开启时生效
+      #max-pool-prepared-statement-per-connection-size: 20
+      filters: stat,wall    #控制监控拦截的filters。stat：监控统计、wall：防火墙（防御sql注入）
+      #通过connection-properties属性来打开mergeSql功能和慢Sql记录
+      connection-properties: 'druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000'
+
+      #监控配置
+      web-stat-filter:
+        enabled: true   #启用statfilter，默认为false
+        url-pattern: "/*"  #过滤的路劲
+        #忽略过滤的形式
+        exclusions: "*.js,*.gif,*.jpg,*.bmp,*.png,*.css,*.ico,/druid/*"
+      stat-view-servlet:
+        url-pattern: "/druid/*"
+        allow: 127.0.0.1     #ip白名单，不设置测允许所有访问
+        deny: 192.168.1.73   #黑名单，与allow同时存在时优先级高于allow
+        reset-enable: false  #禁用html上的reset all功能
+        login-username: admin  #登录id
+        login-password: 123456  #登录密码
