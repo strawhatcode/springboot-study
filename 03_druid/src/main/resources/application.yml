@@ -41,3 +41,10 @@ spring:
         reset-enable: false  #禁用html上的reset all功能
         login-username: admin  #登录id
         login-password: 123456  #登录密码
+mybatis:
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: "com.example.druid.bean"
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true  #开启二级缓存
