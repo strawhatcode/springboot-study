@@ -1,0 +1,19 @@
+spring:
+  redis:
+    host: 127.0.0.1       #连接redis的地址
+    password: 123456      #连接Redis的密码，如果没设置则不填，默认是不填
+    timeout: 10000        #连接超时时间
+  datasource:
+    url: "jdbc:mysql://localhost:3306/test01?characterEncoding=utf8&serviceTimezone=utc"
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  type-aliases-package: "com.example.redis.bean"
+  mapper-locations: classpath:/mybatis/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
+

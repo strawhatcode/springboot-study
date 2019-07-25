@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$/01_mybatis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/02_mybatis_generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/03_druid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/04_redis" charset="UTF-8" />
   </component>
 </project>
