@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: 192.168.229.130  #rabbitmq服务器所在的地址
+    port: 5672             #rabbitmq服务器的端口号
+    username: guest        #帐号
+    password: guest        #密码
+    publisher-confirms: true        #开启发送确认
+    publisher-returns: true         #开启返回确认 ，与mandatory:true同时用
+    template:
+      mandatory: true       #开启后当消息丢失时可以将数据返回到生产者中，否着会直接丢失
+    listener:
+      simple:
+        acknowledge-mode: manual    #设置成手动确认
+      direct:
+        acknowledge-mode: manual    #设置成手动确认

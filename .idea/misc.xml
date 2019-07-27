@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/mybatis_02_generation/pom.xml" />
         <option value="$PROJECT_DIR$/druid/pom.xml" />
         <option value="$PROJECT_DIR$/04_redis/pom.xml" />
+        <option value="$PROJECT_DIR$/05_rabbitmq/pom.xml" />
       </list>
     </option>
   </component>

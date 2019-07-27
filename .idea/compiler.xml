@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="03_druid" />
         <module name="04_redis" />
+        <module name="05_rabbitmq" />
       </profile>
       <profile name="Annotation profile for mybatis_02_generation" enabled="true">
         <sourceOutputDir name="../mybatis_02_generation/target/generated-sources/annotations" />
@@ -27,6 +28,7 @@
       <module name="02_mybatis_generator" target="1.8" />
       <module name="03_druid" target="1.8" />
       <module name="04_redis" target="1.8" />
+      <module name="05_rabbitmq" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -35,6 +37,7 @@
       <module name="02_mybatis_generator" options="-parameters" />
       <module name="03_druid" options="-parameters" />
       <module name="04_redis" options="-parameters" />
+      <module name="05_rabbitmq" options="-parameters" />
     </option>
   </component>
 </project>
