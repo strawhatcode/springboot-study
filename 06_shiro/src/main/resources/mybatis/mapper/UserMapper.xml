@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shiro.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.example.shiro.bean.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="register_date" jdbcType="VARCHAR" property="registerDate" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="login_date" jdbcType="VARCHAR" property="loginDate" />
+    <result column="salt" jdbcType="VARCHAR" property="salt" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from User
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.shiro.bean.User">
+    insert into User (id, user_name, password,
+      register_date, status, login_date,
+      salt)
+    values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+      #{registerDate,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{loginDate,jdbcType=VARCHAR},
+      #{salt,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.example.shiro.bean.User">
+    update User
+    set user_name = #{userName,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      register_date = #{registerDate,jdbcType=VARCHAR},
+      status = #{status,jdbcType=INTEGER},
+      login_date = #{loginDate,jdbcType=VARCHAR},
+      salt = #{salt,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, user_name, password, register_date, status, login_date, salt
+    from User
+    where user_name = #{selectByUserName}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, user_name, password, register_date, status, login_date, salt
+    from User
+  </select>
+</mapper>

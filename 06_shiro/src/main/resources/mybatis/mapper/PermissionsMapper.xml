@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.shiro.mapper.PermissionsMapper">
+  <resultMap id="BaseResultMap" type="com.example.shiro.bean.Permissions">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="perm_name" jdbcType="VARCHAR" property="permName" />
+    <result column="perms" jdbcType="VARCHAR" property="perms" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from Permissions
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.example.shiro.bean.Permissions">
+    insert into Permissions (id, perm_name, perms, 
+      url)
+    values (#{id,jdbcType=INTEGER}, #{permName,jdbcType=VARCHAR}, #{perms,jdbcType=VARCHAR}, 
+      #{url,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.example.shiro.bean.Permissions">
+    update Permissions
+    set perm_name = #{permName,jdbcType=VARCHAR},
+      perms = #{perms,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByRolesId" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    SELECT Permissions.*
+    from Permissions INNER JOIN Roles_Perms on Permissions.perm_name = Roles_Perms.perm_name
+    where role_id = #{selectByRolesId}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, perm_name, perms, url
+    from Permissions
+  </select>
+</mapper>

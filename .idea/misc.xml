@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/druid/pom.xml" />
         <option value="$PROJECT_DIR$/04_redis/pom.xml" />
         <option value="$PROJECT_DIR$/05_rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/06_shiro/pom.xml" />
       </list>
     </option>
   </component>
