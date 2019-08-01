@@ -1,0 +1,13 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: provider
+  dubbo:
+    registry:
+      address: zookeeper://localhost:2181  #使用zookeeper注册
+    protocol:
+      name: dubbo   #使用dubbo
+      port: 20880   #使用dubbo的端口
+#    server: true
+#    scan: com.example.dubbo.service

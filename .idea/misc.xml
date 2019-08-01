@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="com.alibaba.dubbo.config.annotation.Reference" />
+    </list>
+  </component>
   <component name="JavaScriptSettings">
     <option name="languageLevel" value="ES6" />
   </component>
@@ -12,6 +17,8 @@
         <option value="$PROJECT_DIR$/04_redis/pom.xml" />
         <option value="$PROJECT_DIR$/05_rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/06_shiro/pom.xml" />
+        <option value="$PROJECT_DIR$/07_dubbo_provider/pom.xml" />
+        <option value="$PROJECT_DIR$/07_dubbo_consumer/pom.xml" />
       </list>
     </option>
   </component>

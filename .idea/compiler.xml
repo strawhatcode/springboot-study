@@ -10,6 +10,8 @@
         <module name="04_redis" />
         <module name="05_rabbitmq" />
         <module name="06_shiro" />
+        <module name="07_dubbo_consumer" />
+        <module name="07_dubbo_provider" />
       </profile>
       <profile name="Annotation profile for mybatis_02_generation" enabled="true">
         <sourceOutputDir name="../mybatis_02_generation/target/generated-sources/annotations" />
@@ -31,6 +33,8 @@
       <module name="04_redis" target="1.8" />
       <module name="05_rabbitmq" target="1.8" />
       <module name="06_shiro" target="1.8" />
+      <module name="07_dubbo_consumer" target="1.8" />
+      <module name="07_dubbo_provider" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -41,6 +45,8 @@
       <module name="04_redis" options="-parameters" />
       <module name="05_rabbitmq" options="-parameters" />
       <module name="06_shiro" options="-parameters" />
+      <module name="07_dubbo_consumer" options="-parameters" />
+      <module name="07_dubbo_provider" options="-parameters" />
     </option>
   </component>
 </project>
