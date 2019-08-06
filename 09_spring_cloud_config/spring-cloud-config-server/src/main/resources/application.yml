@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/strawhatcode/spring_cloud_config    #远程github仓库的地址
+          search-paths:    #搜索的路径
+          username:        #git帐号，如果该仓库是私有的话需要设置帐号和密码
+          password:        #git密码
+      label: master        #master分支
+server:
+  port: 8201
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8200/eureka    #注册eureka客户端地址

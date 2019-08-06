@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: testconfig    #这个名字要与github远程仓库中的配置文件名一样（可以不要后面的[-dev]、[-test]等环境），否则会报错
+  cloud:
+    config:
+      profile: dev                    #dev环境
+      #      uri: "http://localhost:8200"    #config服务的地址，如果用eureka实现高可用配置，则不用配置uri地址，而用serviceId来查找相应服务
+      label: master                   #master分支
+      discovery:
+        enabled: true                 #开启发现服务
+        serviceId: config-server      #根据服务ID查找相应服务
+    bus:
+      enabled: true         #开启消息总线
+      trace:
+        enabled: true       #开启追踪
+  rabbitmq:
+    host: 192.168.229.130 #rabbitmq的地址
+
+server:
+  port: 8202
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8200/eureka  #eureka注册中心地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh        #暴露此服务的刷新，即用
