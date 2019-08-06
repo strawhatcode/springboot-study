@@ -7,6 +7,8 @@ eureka:
 spring:
   application:
     name: eureka_consumer     #消费者的名称
+  zipkin:
+    base-url: http://localhost:9411     #连接zipkin服务的地址
 feign:
   hystrix:
     enabled: true    #开启断路器，当一个服务不可用时用【自己定义的代码代替返回】，避免造成雪崩效应
