@@ -12,6 +12,12 @@
         <module name="06_shiro" />
         <module name="07_dubbo_consumer" />
         <module name="07_dubbo_provider" />
+        <module name="08_spring_cloud" />
+        <module name="eureka-consumer-ribbon" />
+        <module name="eureka-provider" />
+        <module name="eureka-zuul" />
+        <module name="eureka_consumer" />
+        <module name="eureka_server" />
       </profile>
       <profile name="Annotation profile for mybatis_02_generation" enabled="true">
         <sourceOutputDir name="../mybatis_02_generation/target/generated-sources/annotations" />
@@ -35,6 +41,13 @@
       <module name="06_shiro" target="1.8" />
       <module name="07_dubbo_consumer" target="1.8" />
       <module name="07_dubbo_provider" target="1.8" />
+      <module name="08_spring_cloud" target="1.8" />
+      <module name="eureka-consumer-ribbon" target="1.8" />
+      <module name="eureka-provider" target="1.8" />
+      <module name="eureka-ribbon" target="1.8" />
+      <module name="eureka-zuul" target="1.8" />
+      <module name="eureka_consumer" target="1.8" />
+      <module name="eureka_server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -47,6 +60,13 @@
       <module name="06_shiro" options="-parameters" />
       <module name="07_dubbo_consumer" options="-parameters" />
       <module name="07_dubbo_provider" options="-parameters" />
+      <module name="08_spring_cloud" options="-parameters" />
+      <module name="eureka-consumer-ribbon" options="-parameters" />
+      <module name="eureka-provider" options="-parameters" />
+      <module name="eureka-ribbon" options="-parameters" />
+      <module name="eureka-zuul" options="-parameters" />
+      <module name="eureka_consumer" options="-parameters" />
+      <module name="eureka_server" options="-parameters" />
     </option>
   </component>
 </project>

@@ -1,0 +1,12 @@
+server:
+  port: 8103    #消费者项目的端口号
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/   #服务注册中心的地址路径
+spring:
+  application:
+    name: eureka_consumer     #消费者的名称
+feign:
+  hystrix:
+    enabled: true    #开启断路器，当一个服务不可用时用【自己定义的代码代替返回】，避免造成雪崩效应

@@ -1,0 +1,18 @@
+server:
+  port: 8110        #端口号
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/    #eureka注册中心地址路径
+zuul:
+  routes:
+    a:   #定义a路由
+      path: /a/**     #a路由的路径
+      serviceId: eureka_consumer    #a路由转发给ereka_consumer服务
+    b:   #定义b路由
+      path: /b/**     #b路由的路径
+      serviceId: eureka-consumer-ribbon   #b路由转发给eureka-consumer-ribbon服务
+
+spring:
+  application:
+    name: eureka-zuul   #服务名称

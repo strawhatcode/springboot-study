@@ -19,7 +19,15 @@
         <option value="$PROJECT_DIR$/06_shiro/pom.xml" />
         <option value="$PROJECT_DIR$/07_dubbo_provider/pom.xml" />
         <option value="$PROJECT_DIR$/07_dubbo_consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/08_spring_cloud/pom.xml" />
+        <option value="$PROJECT_DIR$/08_spring_cloud/eureka_server/pom.xml" />
+        <option value="$PROJECT_DIR$/08_spring_cloud/eureka_provider/pom.xml" />
+        <option value="$PROJECT_DIR$/08_spring_cloud/eureka_consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/08_spring_cloud/eureka-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/08_spring_cloud/eureka-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/08_spring_cloud/eureka-consumer-ribbon/pom.xml" />
       </list>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
 </project>

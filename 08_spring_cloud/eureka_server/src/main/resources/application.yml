@@ -1,0 +1,15 @@
+server:
+  port: 8100   #启动项目的端口号
+eureka:
+  instance:
+    hostname: localhost    #端口名称
+  client:
+    register-with-eureka: false      #取消注册eureka，服务注册中心不需要
+    fetch-registry: false            #同上
+    service-url:
+      defaultZone: http://localhost:8100/eureka/   #定义注册中心的地址路径、
+  server:
+    enable-self-preservation: false    #关闭自我保护机制
+spring:
+  application:
+    name: eruka_server    #服务中心的名字

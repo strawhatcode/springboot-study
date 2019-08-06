@@ -1,0 +1,9 @@
+server:
+  port: 8101
+spring:
+  application:
+    name: eureka-provider       #服务提供者的名称，消费者使用到此服务时用到的名称，不支持下划线
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/    #服务注册中心的地址路径

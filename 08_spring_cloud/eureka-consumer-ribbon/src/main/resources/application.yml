@@ -1,0 +1,12 @@
+server:
+  port: 8104
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
+hystrix:
+  metrics:
+    enabled: true
+spring:
+  application:
+    name: eureka-consumer-ribbon

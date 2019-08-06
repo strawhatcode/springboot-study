@@ -9,6 +9,12 @@
     <file url="file://$PROJECT_DIR$/06_shiro" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07_dubbo_consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/07_dubbo_provider" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/07_dubbo_provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_spring_cloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_spring_cloud/eureka-consumer-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_spring_cloud/eureka-provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_spring_cloud/eureka-ribbon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_spring_cloud/eureka-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_spring_cloud/eureka_consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/08_spring_cloud/eureka_server" charset="UTF-8" />
   </component>
 </project>
